@@ -185,6 +185,17 @@ footer.attribution a {
     }
 }
 
+@media (min-width: 50rem) and (min-height: 35rem) {
+    body {
+        min-height: 100svh;
+        margin-bottom: 0;
+    }
+
+    footer.attribution {
+        bottom: calc(var(--footer-buffer) / 2);
+    }
+}
+
 /* Hover effects */
 @media (hover: hover) and (pointer: fine) {
     button {
