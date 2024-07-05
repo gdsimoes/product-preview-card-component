@@ -1,3 +1,159 @@
+/****************
+    Variables 
+****************/
+
+:root {
+    /* Primary Colors */
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+
+    /* Neutral Colors */
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Sizes */
+    --footer-buffer: 50px;
+    --main-width: 343px;
+}
+
+/*********************
+    General Layout 
+*********************/
+
 body {
-    background-color: deepskyblue;
+    min-height: calc(100svh - var(--footer-buffer));
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--cream);
+
+    /* Margin needed to reserve room for the footer */
+    margin-bottom: var(--footer-buffer);
+
+    /* Main font and color */
+    font-family: "Montserrat", sans-serif;
+    color: var(--dark-grayish-blue);
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-feature-settings: "clig" off, "liga" off;
+}
+
+/*****************
+    Typography 
+*****************/
+
+.category {
+    font-size: 0.75rem;
+    line-height: normal;
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+    color: var(--dark-grayish-blue);
+}
+
+h1 {
+    font-family: "Fraunces", serif;
+    font-size: 2rem;
+    line-height: 1;
+
+    color: var(--very-dark-blue);
+}
+
+.description {
+    line-height: 1.64286;
+}
+
+.prices .discounted {
+    font-family: "Fraunces", serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+
+    color: var(--dark-cyan);
+}
+
+.prices .full {
+    font-size: 0.8125rem;
+    line-height: 1.76923;
+}
+
+button {
+    color: var(--white);
+    font-weight: 700;
+    line-height: normal;
+}
+
+/********************
+    Mobile Layout 
+********************/
+main {
+    width: var(--main-width);
+    background-color: var(--white);
+
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.text-content {
+    padding: 24px;
+}
+
+.category {
+    margin-bottom: 12px;
+}
+
+h1 {
+    margin-bottom: 16px;
+}
+
+.description {
+    margin-bottom: 24px;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    min-height: 48px;
+    background-color: var(--dark-cyan);
+    border: none;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11.61px;
+}
+
+/* Footer */
+footer.attribution {
+    position: absolute;
+    bottom: calc(-1em - var(--footer-buffer) / 2);
+
+    font-size: 0.6875rem;
+    color: var(--very-dark-blue);
+    text-align: center;
+}
+
+footer.attribution a {
+    color: inherit;
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+/* Hover effects */
+@media (hover: hover) and (pointer: fine) {
+    footer.attribution a:hover {
+        text-decoration: underline;
+    }
 }
