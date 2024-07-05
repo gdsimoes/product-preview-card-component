@@ -5,6 +5,7 @@
 :root {
     /* Primary Colors */
     --dark-cyan: hsl(158, 36%, 37%);
+    --darker-cyan: hsl(158, 42%, 18%);
     --cream: hsl(30, 38%, 92%);
 
     /* Neutral Colors */
@@ -13,8 +14,13 @@
     --white: hsl(0, 0%, 100%);
 
     /* Sizes */
-    --footer-buffer: 50px;
     --main-width: 343px;
+    --text-content-padding: 24px;
+    --category-margin-bottom: 12px;
+    --h1-margin-bottom: 16px;
+    --description-margin-bottom: 24px;
+    --prices-margin-bottom: 20px;
+    --footer-buffer: 50px;
 }
 
 /*********************
@@ -97,29 +103,33 @@ main {
 
     border-radius: 10px;
     overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .text-content {
-    padding: 24px;
+    padding: var(--text-content-padding);
 }
 
 .category {
-    margin-bottom: 12px;
+    margin-bottom: var(--category-margin-bottom);
 }
 
 h1 {
-    margin-bottom: 16px;
+    margin-bottom: var(--h1-margin-bottom);
 }
 
 .description {
-    margin-bottom: 24px;
+    margin-bottom: var(--description-margin-bottom);
 }
 
 .prices {
     display: flex;
     align-items: center;
     gap: 24px;
-    margin-bottom: 20px;
+    margin-bottom: var(--prices-margin-bottom);
+    padding-left: 1px;
 }
 
 button {
@@ -151,8 +161,40 @@ footer.attribution a {
     text-decoration: none;
 }
 
+/*********************
+    Desktop Layout
+*********************/
+
+/* Variables */
+@media (min-width: 50rem) {
+    :root {
+        --main-width: 600px;
+        --text-content-padding: 32px;
+        --category-margin-bottom: 20px;
+        --h1-margin-bottom: 24px;
+        --description-margin-bottom: 29px;
+        --prices-margin-bottom: 30px;
+    }
+
+    main {
+        flex-direction: row;
+    }
+
+    main > * {
+        width: 50%;
+    }
+}
+
 /* Hover effects */
 @media (hover: hover) and (pointer: fine) {
+    button {
+        transition: background-color 0.2s;
+    }
+
+    button:hover {
+        background-color: var(--darker-cyan);
+    }
+
     footer.attribution a:hover {
         text-decoration: underline;
     }
