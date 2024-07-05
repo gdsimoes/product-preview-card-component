@@ -94,10 +94,45 @@ button {
 main {
     width: var(--main-width);
     background-color: var(--white);
+
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .text-content {
     padding: 24px;
+}
+
+.category {
+    margin-bottom: 12px;
+}
+
+h1 {
+    margin-bottom: 16px;
+}
+
+.description {
+    margin-bottom: 24px;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    min-height: 48px;
+    background-color: var(--dark-cyan);
+    border: none;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11.61px;
 }
 
 /* Footer */
