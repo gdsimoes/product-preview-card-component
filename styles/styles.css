@@ -105,7 +105,7 @@ footer.attribution {
     position: absolute;
     bottom: calc(-1em - var(--footer-buffer) / 2);
 
-    font-size: 0.75rem;
+    font-size: 0.6875rem;
     color: var(--very-dark-blue);
     text-align: center;
 }
