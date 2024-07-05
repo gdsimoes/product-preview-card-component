@@ -5,6 +5,7 @@
 :root {
     /* Primary Colors */
     --dark-cyan: hsl(158, 36%, 37%);
+    --darker-cyan: hsl(158, 42%, 18%);
     --cream: hsl(30, 38%, 92%);
 
     /* Neutral Colors */
@@ -186,6 +187,14 @@ footer.attribution a {
 
 /* Hover effects */
 @media (hover: hover) and (pointer: fine) {
+    button {
+        transition: background-color 0.2s;
+    }
+
+    button:hover {
+        background-color: var(--darker-cyan);
+    }
+
     footer.attribution a:hover {
         text-decoration: underline;
     }
