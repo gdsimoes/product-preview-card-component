@@ -39,6 +39,7 @@ body {
     font-family: "Montserrat", sans-serif;
     color: var(--dark-grayish-blue);
     font-size: 0.875rem;
+    font-weight: 500;
     font-feature-settings: "clig" off, "liga" off;
 }
 
@@ -48,8 +49,43 @@ body {
 
 .category {
     font-size: 0.75rem;
+    line-height: normal;
+    letter-spacing: 5px;
+
     text-transform: uppercase;
     color: var(--dark-grayish-blue);
+}
+
+h1 {
+    font-family: "Fraunces", serif;
+    font-size: 2rem;
+    line-height: 1;
+
+    color: var(--very-dark-blue);
+}
+
+.description {
+    line-height: 1.64286;
+}
+
+.prices .discounted {
+    font-family: "Fraunces", serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1;
+
+    color: var(--dark-cyan);
+}
+
+.prices .full {
+    font-size: 0.8125rem;
+    line-height: 1.76923;
+}
+
+button {
+    color: var(--white);
+    font-weight: 700;
+    line-height: normal;
 }
 
 /********************
@@ -60,7 +96,9 @@ main {
     background-color: var(--white);
 }
 
-/* font-family: "Fraunces", serif; */
+.text-content {
+    padding: 24px;
+}
 
 /* Footer */
 footer.attribution {
